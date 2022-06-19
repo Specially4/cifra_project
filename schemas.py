@@ -1,4 +1,3 @@
-
 from marshmallow import Schema, fields
 
 
@@ -14,3 +13,10 @@ class TypeSchema(Schema):
     id = fields.Integer(dump_only=True)
     name = fields.String()
     color_id = fields.Integer()
+
+
+news_schema = NewsSchema()
+alL_news_schema = NewsSchema(many=True)
+
+type_schema = TypeSchema()
+types_schema = TypeSchema(many=True)
