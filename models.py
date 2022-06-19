@@ -1,8 +1,4 @@
-
-from flask_sqlalchemy import SQLAlchemy
-
-from app import app
-db = SQLAlchemy(app)
+from setup_db import db
 
 
 class News(db.Model):
@@ -20,7 +16,3 @@ class Type(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50))
     color = db.Column(db.String(50))
-
-
-db.drop_all()
-db.create_all()
