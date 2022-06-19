@@ -3,6 +3,7 @@ from flask_restx import Api, Resource
 
 from data_news import News, Type, db
 from data_schema import NewsSchema, TypeSchema
+from logger import new_logger
 
 app = Flask(__name__)
 
