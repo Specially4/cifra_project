@@ -25,7 +25,7 @@ class TypesView(Resource):
 
         pass
 
-    def path(self):
+    def patch(self):
         pass
 
     def delete(self):
@@ -55,7 +55,7 @@ class TypeView(Resource):
         db.session.commit()
         return 'Type updated', 204
 
-    def path(self, tid: int):
+    def patch(self, tid: int):
         types = Type.query.get(tid)
         if not types:
             return 'Type not found', 404
