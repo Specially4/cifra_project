@@ -27,7 +27,7 @@ class NewsView(Resource):
     def put(self):
         pass
 
-    def path(self):
+    def patch(self):
         pass
 
     def delete(self):
