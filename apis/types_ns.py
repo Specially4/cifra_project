@@ -51,7 +51,6 @@ class TypeView(Resource):
         data = request.json
         types.name = data.get("name")
         types.color = data.get("color")
-        db.session.add(types)
         db.session.commit()
         return 'Type updated', 204
 
@@ -64,7 +63,6 @@ class TypeView(Resource):
             types.name = data.get("name")
         if 'color' in data:
             types.color = data.get("color")
-        db.session.add(types)
         db.session.commit()
         return 'Type updated', 204
 
