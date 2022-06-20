@@ -58,7 +58,7 @@ class NewsView(Resource):
         db.session.commit()
         return 'Movie updated', 204
 
-    def path(self, nid: int):
+    def patch(self, nid: int):
         news = News.query.get(nid)
         if not news:
             return 'News not found', 404
