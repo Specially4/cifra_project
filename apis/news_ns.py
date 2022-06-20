@@ -54,7 +54,6 @@ class NewsView(Resource):
         news.short_description = data.get("short_description")
         news.description = data.get("description")
         news.type_id = data.get("type_id")
-        db.session.add(news)
         db.session.commit()
         return 'Movie updated', 204
 
@@ -71,7 +70,6 @@ class NewsView(Resource):
             news.description = data.get("description")
         if 'type_id' in data:
             news.type_id = data.get("type_id")
-        db.session.add(news)
         db.session.commit()
         return 'Movie updated', 204
 
